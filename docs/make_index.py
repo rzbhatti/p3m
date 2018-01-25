@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-
 #
 # https://stackoverflow.com/questions/39048654/how-to-enable-directory-indexing-on-github-pages 
 #
@@ -9,6 +8,27 @@ make_index.py </path/to/directory> [--header <header text>]
 """
 from __future__ import print_function
 import os.path, time
+
+import subprocess
+import sys
+def run(cmd):
+    cmd = cmd.split(' ')
+    try :
+        output = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    except Exception as e:
+        # print (e.args)
+        # sys.exc_info()[1]
+        print("ERROR:", sys.exc_info()[1])
+        return
+    stdout, stderr = output.communicate()
+    if len(stdout) != 0:
+        for line in stdout.decode("utf-8").split('\n'):
+            print(line)
+    if len(stderr) != 0:
+        for line in stderr.decode("utf-8").split('\n'):
+            print(line)
+
+
 
 INDEX_TEMPLATE = r"""
 
@@ -77,6 +97,9 @@ def main():
     parser.add_argument("--header")
     args = parser.parse_args()
     fun(args.directory+'/','../')
+    run('git add .')
+    run('git commit -m\"\" ')
+    run('git push')
 
 if __name__ == '__main__':
     main()
