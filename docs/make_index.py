@@ -98,7 +98,7 @@ def main():
     args = parser.parse_args()
     fun(args.directory+'/','../')
     run('git add .')
-    run('git commit -m\"\" ')
+    run('git commit -m\"Updated\" ')
     run('git push')
 
 if __name__ == '__main__':
