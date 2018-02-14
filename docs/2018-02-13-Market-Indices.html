@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+</style>
+</head>
+<body>
+
+
+<div class="tab">
+<button class="tablinks" onclick="openStock(event, '^IXIC')" id="defaultOpen" >Nasdaq</button>
+<button class="tablinks" onclick="openStock(event, '^GSPC')">S&P 500</button>
+<button class="tablinks" onclick="openStock(event, '^DJI')">Dow 30</button>
+<button class="tablinks" onclick="openStock(event, '^DJT')">Dow Jones Transportation Averag</button>
+<button class="tablinks" onclick="openStock(event, '^RUT')">Russell 2000</button>
+<button class="tablinks" onclick="openStock(event, 'DX-Y.NYB')">US Dollar Index</button>
+<button class="tablinks" onclick="openStock(event, '^XOI')">NYSE OIL & GAS Index</button>
+<button class="tablinks" onclick="openStock(event, '^FTSE')">UK FTSE 100</button>
+<button class="tablinks" onclick="openStock(event, '^FCHI')">Paris: CAC 40</button>
+<button class="tablinks" onclick="openStock(event, 'DAX')">Germany DAX </button>
+<button class="tablinks" onclick="openStock(event, '^HSI')">HANG SENG INDEX</button>
+<button class="tablinks" onclick="openStock(event, '000001.SS')">Shanghai SSE Composite Index</button>
+<button class="tablinks" onclick="openStock(event, '^TWII')">Taiwan: TSEC index</button>
+<button class="tablinks" onclick="openStock(event, '^N225')">Nikkei 225</button>
+<button class="tablinks" onclick="openStock(event, '^VIX')">Vix</button>
+<button class="tablinks" onclick="openStock(event, 'CL=F')">Crude Oil</button>
+<button class="tablinks" onclick="openStock(event, 'GC=F')">Gold Futures</button>
+</div>
+<div id="^IXIC" align="center" class="tabcontent">
+<h1> P3M Stock Index Analytics for Nasdaq</h1><br><a href="https://finance.yahoo.com/quote/^IXIC/chart" target="_blank"> Nasdaq @ Yahoo! Finance </a><br>Analytics Run @ Tue Feb 13 21:17:17 2018<br>
+Error ^IXIC
+</div>
+<div id="^GSPC" align="center" class="tabcontent">
+<h1> P3M Stock Index Analytics for S&P 500</h1><br><a href="https://finance.yahoo.com/quote/^GSPC/chart" target="_blank"> S&P 500 @ Yahoo! Finance </a><br>Analytics Run @ Tue Feb 13 21:17:24 2018<br>
+Error ^GSPC
+</div>
+<div id="^DJI" align="center" class="tabcontent">
+<h1> P3M Stock Index Analytics for Dow 30</h1><br><a href="https://finance.yahoo.com/quote/^DJI/chart" target="_blank"> Dow 30 @ Yahoo! Finance </a><br>Analytics Run @ Tue Feb 13 21:17:27 2018<br>
+Error ^DJI
+</div>
+<div id="^DJT" align="center" class="tabcontent">
+<h1> P3M Stock Index Analytics for Dow Jones Transportation Averag</h1><br><a href="https://finance.yahoo.com/quote/^DJT/chart" target="_blank"> Dow Jones Transportation Averag @ Yahoo! Finance </a><br>Analytics Run @ Tue Feb 13 21:17:31 2018<br>
+Error ^DJT
+</div>
+<div id="^RUT" align="center" class="tabcontent">
+<h1> P3M Stock Index Analytics for Russell 2000</h1><br><a href="https://finance.yahoo.com/quote/^RUT/chart" target="_blank"> Russell 2000 @ Yahoo! Finance </a><br>Analytics Run @ Tue Feb 13 21:17:34 2018<br>
+Error ^RUT
+</div>
+<div id="DX-Y.NYB" align="center" class="tabcontent">
+<h1> P3M Stock Index Analytics for US Dollar Index</h1><br><a href="https://finance.yahoo.com/quote/DX-Y.NYB/chart" target="_blank"> US Dollar Index @ Yahoo! Finance </a><br>Analytics Run @ Tue Feb 13 21:17:37 2018<br>
+Error DX-Y.NYB
+</div>
+<div id="^XOI" align="center" class="tabcontent">
+<h1> P3M Stock Index Analytics for NYSE OIL & GAS Index</h1><br><a href="https://finance.yahoo.com/quote/^XOI/chart" target="_blank"> NYSE OIL & GAS Index @ Yahoo! Finance </a><br>Analytics Run @ Tue Feb 13 21:17:40 2018<br>
+Error ^XOI
+</div>
+<div id="^FTSE" align="center" class="tabcontent">
+<h1> P3M Stock Index Analytics for UK FTSE 100</h1><br><a href="https://finance.yahoo.com/quote/^FTSE/chart" target="_blank"> UK FTSE 100 @ Yahoo! Finance </a><br>Analytics Run @ Tue Feb 13 21:17:43 2018<br>
+Error ^FTSE
+</div>
+<div id="^FCHI" align="center" class="tabcontent">
+<h1> P3M Stock Index Analytics for Paris: CAC 40</h1><br><a href="https://finance.yahoo.com/quote/^FCHI/chart" target="_blank"> Paris: CAC 40 @ Yahoo! Finance </a><br>Analytics Run @ Tue Feb 13 21:17:46 2018<br>
+Error ^FCHI
+</div>
+<div id="DAX" align="center" class="tabcontent">
+<h1> P3M Stock Index Analytics for Germany DAX </h1><br><a href="https://finance.yahoo.com/quote/DAX/chart" target="_blank"> Germany DAX  @ Yahoo! Finance </a><br>Analytics Run @ Tue Feb 13 21:17:52 2018<br>
+Error DAX
+</div>
+<div id="^HSI" align="center" class="tabcontent">
+<h1> P3M Stock Index Analytics for HANG SENG INDEX</h1><br><a href="https://finance.yahoo.com/quote/^HSI/chart" target="_blank"> HANG SENG INDEX @ Yahoo! Finance </a><br>Analytics Run @ Tue Feb 13 21:17:55 2018<br>
+Error ^HSI
+</div>
+<div id="000001.SS" align="center" class="tabcontent">
+<h1> P3M Stock Index Analytics for Shanghai SSE Composite Index</h1><br><a href="https://finance.yahoo.com/quote/000001.SS/chart" target="_blank"> Shanghai SSE Composite Index @ Yahoo! Finance </a><br>Analytics Run @ Tue Feb 13 21:17:59 2018<br>
+Error 000001.SS
+</div>
+<div id="^TWII" align="center" class="tabcontent">
+<h1> P3M Stock Index Analytics for Taiwan: TSEC index</h1><br><a href="https://finance.yahoo.com/quote/^TWII/chart" target="_blank"> Taiwan: TSEC index @ Yahoo! Finance </a><br>Analytics Run @ Tue Feb 13 21:18:02 2018<br>
+Error ^TWII
+</div>
+<div id="^N225" align="center" class="tabcontent">
+<h1> P3M Stock Index Analytics for Nikkei 225</h1><br><a href="https://finance.yahoo.com/quote/^N225/chart" target="_blank"> Nikkei 225 @ Yahoo! Finance </a><br>Analytics Run @ Tue Feb 13 21:18:08 2018<br>
+Error ^N225
+</div>
+<div id="^VIX" align="center" class="tabcontent">
+<h1> P3M Stock Index Analytics for Vix</h1><br><a href="https://finance.yahoo.com/quote/^VIX/chart" target="_blank"> Vix @ Yahoo! Finance </a><br>Analytics Run @ Tue Feb 13 21:18:10 2018<br>
+Error ^VIX
+</div>
+<div id="CL=F" align="center" class="tabcontent">
+<h1> P3M Stock Index Analytics for Crude Oil</h1><br><a href="https://finance.yahoo.com/quote/CL=F/chart" target="_blank"> Crude Oil @ Yahoo! Finance </a><br>Analytics Run @ Tue Feb 13 21:18:13 2018<br>
+Error CL=F
+</div>
+<div id="GC=F" align="center" class="tabcontent">
+<h1> P3M Stock Index Analytics for Gold Futures</h1><br><a href="https://finance.yahoo.com/quote/GC=F/chart" target="_blank"> Gold Futures @ Yahoo! Finance </a><br>Analytics Run @ Tue Feb 13 21:18:16 2018<br>
+Error GC=F
+</div>
+
+<script>
+function openStock(evt, stockName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(stockName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+     
+</body>
+</html> 
+
+    
